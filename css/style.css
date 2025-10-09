@@ -157,7 +157,7 @@
 
 /* Tema Escuro */
 :root[data-theme="dark"] {
-	--color-background: #181818;
+	--color-background: #111111;
 	--color-foreground: #fbfbfb;
 	--color-accent: #00ffaa;
 	--color-accent-reverse: #009970;
