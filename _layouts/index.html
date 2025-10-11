@@ -5,31 +5,24 @@ layout: default
 <main>
 	<section id="intro">
 		<header id="hero">
-			<svg class="icon-logo">
-				<use href="#icon-logo"></use>
-			</svg>
-			<div class="row">
-				<svg class="left-corner">
-					<use href="#left-corner"></use>
-				</svg>
-				<div class="text">
-					<h1>Guilherme Almeida<br /><span>UI/UX Designer</span><br /><span>Game Developer</span></h1>
-				</div>
-				<svg class="right-corner">
-					<use href="#right-corner"></use>
-				</svg>
+			<div id="title">
+				<h1>Guilherme Almeida<br /><span>UI/UX Designer</span><br /><span>Game Developer</span></h1>
 			</div>
-		</header>
-		<div id="cta">
-			<a class="cta-button" href="{{ '/#product-design' | relative_url }}"><span>{{ page.button-portfolio | default: 'Missing label'}}</span></a>
-			<a class="cta-button" href="{{ '/about/' | relative_url }}"><span>{{ page.button-about | default: 'Missing label'}}</span></a>
-			<a class="cta-button" href="{{ 'https://www.linkedin.com/in/guilherme-odai/' | absolute_url }}" target="_blank" rel="noopener noreferrer"><span>{{ page.button-linkedin | default: 'Missing label'}}
+			<div id="image-1">
+			</div>
+			<div id="image-2">
+			</div>
+			<div id="image-3">
+			</div>
+			<a id="button-1" class="cta-button" href="{{ '/#product-design' | relative_url }}"><span>{{ page.button-portfolio | default: 'Missing label'}}</span></a>
+			<a id="button-2" class="cta-button" href="{{ '/about/' | relative_url }}"><span>{{ page.button-about | default: 'Missing label'}}</span></a>
+			<a id="button-3" class="cta-button" href="{{ 'https://www.linkedin.com/in/guilherme-odai/' | absolute_url }}" target="_blank" rel="noopener noreferrer"><span>{{ page.button-linkedin | default: 'Missing label'}}
 					<svg class="icon-linkedin">
 						<use href="#icon-linkedin"></use>
 					</svg>
 				</span>
 			</a>
-		</div>
+		</header>
 	</section>
 
 	{% if site.portfolio-products and site.portfolio-products.size > 0 %}
