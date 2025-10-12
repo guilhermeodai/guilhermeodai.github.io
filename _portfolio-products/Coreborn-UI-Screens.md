@@ -14,7 +14,7 @@ summary-tools: "Figma, Photoshop, Unreal Engine 5 / UMG"
 
 Coreborn: Nations of the Ultracore is a multiplayer survival game developed by Blankhans GmbH. Set in the world of Tormentosia, the game blends crafting, exploration, and cooperative gameplay with a strong narrative foundation. Players build settlements, gather resources, and defend their communities against waves of enemy attacks, all while uncovering the deeper lore of the Core and its scattered nations.
 
-As the UI/UX Designer for Coreborn, I was responsible for the design of the entire in-game interface — from visual aesthetics to user experience. This included screen layouts, interaction flows, menus, HUD elements, and overall visual polish. I collaborated closely with the game team to ensure the interface was not only visually cohesive but also intuitive and supportive of the gameplay experience.
+Being the sole UI/UX Designer on the Coreborn team, I was responsible for the entire game interface design — from visual aesthetics to user experience. This included screen layouts, interaction flows, menus, HUD elements, and overall visual polish. I collaborated closely with game designers and engineers to ensure the interface was not only visually cohesive but also intuitive and supportive of the gameplay experience.
 
 {% include figure.html 
    src="/assets/images/portfolio/pd_coreborn-screens/screen-00_start-menu.webp" 
