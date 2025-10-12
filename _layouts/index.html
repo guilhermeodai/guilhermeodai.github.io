@@ -14,14 +14,21 @@ layout: default
 			</div>
 			<div id="image-3">
 			</div>
-			<a id="button-1" class="cta-button" href="{{ '/#product-design' | relative_url }}"><span>{{ page.button-portfolio | default: 'Missing label'}}</span></a>
-			<a id="button-2" class="cta-button" href="{{ '/about/' | relative_url }}"><span>{{ page.button-about | default: 'Missing label'}}</span></a>
-			<a id="button-3" class="cta-button" href="{{ 'https://www.linkedin.com/in/guilherme-odai/' | absolute_url }}" target="_blank" rel="noopener noreferrer"><span>{{ page.button-linkedin | default: 'Missing label'}}
-					<svg class="icon-linkedin">
-						<use href="#icon-linkedin"></use>
-					</svg>
-				</span>
-			</a>
+			<div id="button-1" class="button-container">
+				<a class="cta-button" href="{{ '/#product-design' | relative_url }}"><span>{{ page.button-portfolio | default: 'Missing label'}}</span></a>
+			</div>
+			<div id="button-2" class="button-container">
+				<a class="cta-button" href="{{ '/about/' | relative_url }}"><span>{{ page.button-about | default: 'Missing label'}}</span></a>
+			</div>
+			<div id="button-3" class="button-container">
+				<a class="cta-button" href="{{ 'https://www.linkedin.com/in/guilherme-odai/' | absolute_url }}" target="_blank" rel="noopener noreferrer">
+					<span>{{ page.button-linkedin | default: 'Missing label'}}
+						<svg class="icon-linkedin">
+							<use href="#icon-linkedin"></use>
+						</svg>
+					</span>
+				</a>
+			</div>
 		</header>
 	</section>
 
@@ -58,7 +65,9 @@ layout: default
 			</div>
 			{% if site.portfolio-products.size > 4 %}
 			<div class="accordion-wrapper">
-				<button class="accordion-button"><span>▼</span><span>{{ page.products-all | default: 'Missing label'}}</span><span>▼</span></button>
+				<div class="button-container">
+					<button class="accordion-button"><span>{{ page.products-all | default: 'Missing label'}}</span></button>
+				</div>
 				<div class="accordion-content" inert>
 					<div class="sample-portfolio-grid">
 						{% for item in projects offset:2 %}
@@ -125,7 +134,7 @@ layout: default
 			</div>
 			{% if site.portfolio-cases.size > 4 %}
 			<div class="accordion-wrapper">
-				<button class="accordion-button"><span>▼</span><span>{{ page.cases-all | default: 'Missing label'}}</span><span>▼</span></button>
+				<button class="accordion-button"><span>{{ page.cases-all | default: 'Missing label'}}</span></button>
 				<div class="accordion-content" inert>
 					<div class="sample-portfolio-grid">
 						{% for item in cases offset:2 %}
@@ -199,7 +208,7 @@ layout: default
 			</div>
 			{% if site.portfolio-extras.size > 4 %}
 			<div class="accordion-wrapper">
-				<button class="accordion-button"><span>▼</span><span>{{ page.extras-all | default: 'Missing label'}}</span><span>▼</span></button>
+				<button class="accordion-button"><span>{{ page.extras-all | default: 'Missing label'}}</span></button>
 				<div class="accordion-content" inert>
 					<div class="sample-portfolio-grid">
 						{% for item in extra offset:2 %}

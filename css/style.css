@@ -135,6 +135,7 @@
 	--body-padding: 1.5rem;
 	--nav-height: 3.25rem;
 	--fluid-padding-h: clamp(1rem, 8%, 4rem);
+	--fluid-padding-hero: clamp(0rem, -3.2727rem + 4.5455vw, 4rem);
 	--logo-padding-mobile: clamp(2rem, 1.6429rem + 1.7857vw, 2.5rem);
 	--logo-padding: calc(clamp(1.5rem, -1.3966rem + 6.0345vw, 5rem) + 1.5rem);
 }
@@ -151,7 +152,6 @@
 	--color-unfocused: #fff;
 	--color-focused: rgba(0,153,112,.08);
 	--color-pulse: rgba(0,153,112,.5);
-	--gradient-accent: linear-gradient(to right, #00ffaa 0%, #009970 35%, #009970 65%, #00ffaa 100%);
 	--hero-mobile: url("../assets/temp/tokyo.webp");
 	--hero-1: url("../assets/temp/tokyo.webp");
 	--hero-2: url("../assets/temp/tokyo.webp");
@@ -170,7 +170,6 @@
 	--color-unfocused: #1d1d1d;
 	--color-focused: rgba(0,255,170,.04);
 	--color-pulse: rgba(0,255,170,.5);
-	--gradient-accent: linear-gradient(to right, #009970 0%, #00ffaa 35%, #00ffaa 65%, #009970 100%);
 	--hero-mobile: url("../assets/temp/fuji.webp");
 	--hero-1: url("../assets/temp/fuji.webp");
 	--hero-2: url("../assets/temp/fuji.webp");
@@ -569,7 +568,7 @@ button[type="submit"]::after {
 	position: absolute;
 	z-index: 0;
 	inset: -.0625rem;
-	background: var(--gradient-accent);
+	background: var(--color-accent);
 	transform: scaleX(0);
 	transform-origin: center center;
 	transition: transform .3s ease;
@@ -586,6 +585,16 @@ button[type="submit"]:active {
 
 button[type="submit"]:active::after {
 	transform: scaleX(2);
+}
+
+.button-container {
+	padding: .25em;
+	border: .0625em solid var(--color-foreground);
+	border-radius: 1em;
+}
+
+.button-container:hover {	
+	border: .0625em solid var(--color-accent);
 }
 
 @media only screen and (min-width: 50em) {
@@ -1747,7 +1756,7 @@ svg.icon-itchio {
 	content: "";
 	position: absolute;
 	inset: -.0625rem;
-	background: var(--gradient-accent);
+	background: var(--color-accent);
 	transform: scaleX(0);
 	transform-origin: center center;
 	transition: transform .3s ease;
@@ -1966,7 +1975,7 @@ footer p {
 }
 
 #title h1 {
-	margin: 0 0 2em;
+	margin: 0 0 1em;
 	padding: 0;
 	font-size: var(--h1);
 	letter-spacing: -.02em;
@@ -1987,22 +1996,26 @@ footer p {
 
 #image-1 {
 	grid-area: image-1;
-	background-image: var(--hero-mobile);
+/* 	background-image: var(--hero-mobile); */
+background-color: #00ffaa;
+	margin-bottom: 1.5em;
 }
 
 #image-2 {
 	grid-area: image-2;
-	background-image: var(--hero-2);
+/* 	background-image: var(--hero-2); */
+background-color:#ff7f50;
 	display: none;
 }
 
 #image-3 {
 	grid-area: image-3;
-	background-image: var(--hero-3);
+/* 	background-image: var(--hero-3); */
+background-color: #4682b4;
 	display: none;
 }
 
-#button-1, #button-2, #button-3 {
+#button-1, #button-2, #button-3 {	
 	margin: 1em 0 0;
 }
 
@@ -2051,7 +2064,7 @@ footer p {
 	content: "";
 	position: absolute;
 	inset: -.0625rem;
-	background: var(--gradient-accent);
+	background: var(--color-accent);
 	transform: scaleX(0);
 	transform-origin: center center;
 	transition: transform .3s ease;
@@ -2078,14 +2091,14 @@ footer p {
 
 	#hero {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto 3.375rem 1fr auto auto;
+		grid-template-rows: auto 1fr auto auto auto;
 		column-gap: var(--grid-gutter);	
 		grid-template-areas:
-		"title    title"
-		".        image-2"
-		"image-1  image-2"
-		"image-1  button-2"
-		"button-1 button-3";
+		"title    image-1"
+		".        image-1"
+		"button-1 image-2"
+		"button-2 image-2"
+		"button-3 image-2";
 	}
 
 	#title h1 {
@@ -2094,10 +2107,12 @@ footer p {
 
 	#image-1 {
 		background-image: var(--hero-1);
+		margin-bottom: .75em;
 	}
 
 	#image-2 {
 		display: block;
+		margin-top: 1.25em;
 	}
 	
 	#button-1, #button-2, #button-3 {
@@ -2109,13 +2124,12 @@ footer p {
 	#intro {
 		justify-content: center;
 		max-width: var(--grid-max-width);
-	}
+	}	
 
 	#hero {
 		column-gap: var(--grid-gutter);	
 		grid-template-columns: repeat(3, 1fr);
-
-		grid-template-rows: auto 4em 4em 1fr auto;
+		grid-template-rows: auto 7vh 7vh 1fr auto;
 		grid-template-areas:
 		"title    title    title"
 		".        .        image-3"
@@ -2124,12 +2138,20 @@ footer p {
 		"button-1 button-2 button-3";
 	}
 
+	#title h1 {
+		margin: 0 0 clamp(1rem, -0.2857rem + 1.7857vw, 4rem);
+	}
+
+	#image-1, #image-2 {
+		margin: 0;
+	}
+
 	#image-3 {
 		display: block;
 	}
 	
 	#button-1, #button-2, #button-3 {
-		margin: var(--content-margin) 0 0;
+		margin: var(--grid-gutter) 0 0;
 	}
 }
 
@@ -2140,25 +2162,27 @@ footer p {
 /*	■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 
 .accordion-wrapper {
-	margin-top: 2em;
+	margin: 2em auto 0;
+	width: 100%;
 }
 
 .accordion-button {
 	display: flex;
 	gap: .375em;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	position: relative;
 	overflow: hidden;
+	width: 100%;
 	margin: 0 auto;
 	padding: .5em 1em;
-	width: 100%;
-	background: var(--color-unfocused);
+	background: var(--color-foreground);
 	border: .0625em solid var(--color-support-lc);
 	border-radius: .5em;
-	color: var(--color-foreground);
+	color: var(--color-background);
 	font-size: var(--p);
 	font-weight: 600;
+	text-align: center;
 	z-index: 0;
 }
 
@@ -2185,7 +2209,7 @@ footer p {
 	content: "";
 	position: absolute;
 	inset: -.0625rem;
-	background: var(--gradient-accent);
+	background: var(--color-accent);
 	transform: scaleX(0);
 	transform-origin: center center;
 	transition: transform .3s ease;
@@ -2220,10 +2244,8 @@ footer p {
 }
 
 @media screen and (min-width: 50em) {
-	.accordion-button {
+	.accordion-wrapper {
 		width: calc(50% - (var(--grid-gutter) / 2));
-		margin-left: auto;
-		margin-right: auto;
 	}
 }
 
