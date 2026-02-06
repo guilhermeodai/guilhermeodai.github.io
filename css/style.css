@@ -589,7 +589,7 @@ button[type="submit"]:active::after {
 
 .button-container {
 	padding: .25em;
-	border: .0625em solid var(--color-foreground);
+	border: .0625em solid var(--color-support-lc);
 	border-radius: 1em;
 }
 
