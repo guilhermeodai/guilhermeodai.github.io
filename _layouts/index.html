@@ -2,7 +2,11 @@
 layout: default
 ---
 
-<main>
+<div id="intro-wrapper">
+	<!-- 	<video autoplay loop muted playsinline>
+		<source src="/assets/images/portfolio/sq_post-processing/osaka.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video> -->
 	<section id="intro">
 		<header id="hero">
 			<div id="title">
@@ -31,7 +35,11 @@ layout: default
 			</div>
 		</header>
 	</section>
+</div>
 
+
+
+<main>
 	{% if site.portfolio-products and site.portfolio-products.size > 0 %}
 	<section id="product-design" class="grid-container secondary">
 		<div class="col-4">
@@ -238,7 +246,7 @@ layout: default
 	{% endif %}
 
 	{% if site.posts and site.posts.size > 0 %}
-	<!-- <section class="grid-container secondary">
+	<section class="grid-container secondary">
 		<div class="col-4">
 			<header class="sticky">
 				<h2 class="section-title">{{ page.articles-title | default: 'Missing title'}}</h2>
@@ -271,7 +279,7 @@ layout: default
 				<a href="{{ '/articles/' | relative_url }}"><span>{{ page.articles-all | default: 'Missing label'}}</span></a>
 			</div>
 		</div>
-	</section> -->
+	</section>
 	{% endif %}
 </main>
 
