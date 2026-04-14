@@ -2,38 +2,40 @@
 layout: default
 ---
 
-<main class="grid-container">
-	<div class="col-12">
+<main>
+	<div class="grid-container">
+		<div class="col-12">
 
-		{% if site.posts and site.posts.size > 0 %}
-		<section id="blog">
-			<header>
-				<h2 class="section-title">{{ page.blog-title | default: 'Missing Title'}}</h2>
-				<p class="section-description">{{ page.blog-description | default: 'Missing description'}}</p>
-			</header>
-			{% assign blog = site.posts | sort: 'date' | reverse %}
-			<div class="blog-grid">
-				{% for post in blog %}
-				<article class="blog-card">
-					<a href="{{ post.url }}" class="blog-card-link">
-						<div class="blog-card-image">
-							<img src="{{ post.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
-						</div>
-						<div class="blog-card-info">
-							<h3>{{ post.title }}</h3>
-							<div class="blog-card-date">
-								<svg class="icon-calendar">
-									<use href="#icon-calendar"></use>
-								</svg>
-								<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>
+			{% if site.posts and site.posts.size > 0 %}
+			<section id="blog">
+				<header>
+					<h2 class="section-title">{{ page.blog-title | default: 'Missing Title'}}</h2>
+					<p class="section-description">{{ page.blog-description | default: 'Missing description'}}</p>
+				</header>
+				{% assign blog = site.posts | sort: 'date' | reverse %}
+				<div class="blog-grid">
+					{% for post in blog %}
+					<article class="blog-card">
+						<a href="{{ post.url }}" class="blog-card-link">
+							<div class="blog-card-image">
+								<img src="{{ post.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
 							</div>
-						</div>
-					</a>
-				</article>
-				{% endfor %}
-			</div>
-		</section>
-		{% endif %}
+							<div class="blog-card-info">
+								<h3>{{ post.title }}</h3>
+								<div class="blog-card-date">
+									<svg class="icon-calendar">
+										<use href="#icon-calendar"></use>
+									</svg>
+									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>
+								</div>
+							</div>
+						</a>
+					</article>
+					{% endfor %}
+				</div>
+			</section>
+			{% endif %}
 
+		</div>
 	</div>
 </main>

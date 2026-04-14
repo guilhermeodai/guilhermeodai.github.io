@@ -2,94 +2,96 @@
 layout: default
 ---
 
-<main class="grid-container">
-	<div class="col-12">
+<main>
+	<div class="grid-container">
+		<div class="col-12">
 
-		{% if site.portfolio-projects and site.portfolio-projects.size > 0 %}
-		<section id="ux-projects">
-			<header>
-				<h2 class="section-title">{{ page.projects-title | default: 'Missing Title'}}</h2>
-				<p class="section-description">{{ page.projects-description | default: 'Missing description'}}</p>
-			</header>
-			{% assign projects = site.portfolio-projects | sort: 'date' | reverse %}
-			<div class="portfolio-grid">
-				{% for item in projects %}
-				<article class="portfolio-card">
-					<a href="{{ item.url }}" class="portfolio-card-link">
-						<div class="portfolio-card-image">
-							<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
-						</div>
-						<div class="portfolio-card-info">
-							<h3>{{ item.title }}</h3>
-							<ul>
-								<li><small>Description</small> {{ item.summary-description | default: '—' }}</li>
-								<li><small>Role</small> {{ item.summary-role | default: '—' }}</li>
-								<li><small>Tools</small> {{ item.summary-tools | default: '—' }}</li>
-							</ul>
-						</div>
-					</a>
-				</article>
-				{% endfor %}
-			</div>
-		</section>
-		{% endif %}
+			{% if site.portfolio-projects and site.portfolio-projects.size > 0 %}
+			<section id="ux-projects">
+				<header>
+					<h2 class="section-title">{{ page.projects-title | default: 'Missing Title'}}</h2>
+					<p class="section-description">{{ page.projects-description | default: 'Missing description'}}</p>
+				</header>
+				{% assign projects = site.portfolio-projects | sort: 'date' | reverse %}
+				<div class="portfolio-grid">
+					{% for item in projects %}
+					<article class="portfolio-card">
+						<a href="{{ item.url }}" class="portfolio-card-link">
+							<div class="portfolio-card-image">
+								<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
+							</div>
+							<div class="portfolio-card-info">
+								<h3>{{ item.title }}</h3>
+								<ul>
+									<li><small>Description</small> {{ item.summary-description | default: '—' }}</li>
+									<li><small>Role</small> {{ item.summary-role | default: '—' }}</li>
+									<li><small>Tools</small> {{ item.summary-tools | default: '—' }}</li>
+								</ul>
+							</div>
+						</a>
+					</article>
+					{% endfor %}
+				</div>
+			</section>
+			{% endif %}
 
-		{% if site.portfolio-cases and site.portfolio-cases.size > 0 %}
-		<section id="case-studies">
-			<header>
-				<h2 class="section-title">{{ page.cases-title | default: 'Missing Title'}}</h2>
-				<p class="section-description">{{ page.cases-description | default: 'Missing description'}}</p>
-			</header>
-			{% assign cases = site.portfolio-cases | sort: 'date' | reverse %}
-			<div class="portfolio-grid">
-				{% for item in cases %}
-				<article class="portfolio-card">
-					<a href="{{ item.url }}" class="portfolio-card-link">
-						<div class="portfolio-card-image">
-							<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
-						</div>
-						<div class="portfolio-card-info">
-							<h3>{{ item.title }}</h3>
-							<ul>
-								<li><small>Problem</small> {{ item.summary-problem | default: '—' }}</li>
-								<li><small>Solution</small> {{ item.summary-solution | default: '—' }}</li>
-								<li><small>Outcome</small> {{ item.summary-outcome | default: '—' }}</li>
-							</ul>
-						</div>
-					</a>
-				</article>
-				{% endfor %}
-			</div>
-		</section>
-		{% endif %}
+			{% if site.portfolio-cases and site.portfolio-cases.size > 0 %}
+			<section id="case-studies">
+				<header>
+					<h2 class="section-title">{{ page.cases-title | default: 'Missing Title'}}</h2>
+					<p class="section-description">{{ page.cases-description | default: 'Missing description'}}</p>
+				</header>
+				{% assign cases = site.portfolio-cases | sort: 'date' | reverse %}
+				<div class="portfolio-grid">
+					{% for item in cases %}
+					<article class="portfolio-card">
+						<a href="{{ item.url }}" class="portfolio-card-link">
+							<div class="portfolio-card-image">
+								<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
+							</div>
+							<div class="portfolio-card-info">
+								<h3>{{ item.title }}</h3>
+								<ul>
+									<li><small>Problem</small> {{ item.summary-problem | default: '—' }}</li>
+									<li><small>Solution</small> {{ item.summary-solution | default: '—' }}</li>
+									<li><small>Outcome</small> {{ item.summary-outcome | default: '—' }}</li>
+								</ul>
+							</div>
+						</a>
+					</article>
+					{% endfor %}
+				</div>
+			</section>
+			{% endif %}
 
-		{% if site.portfolio-experiments and site.portfolio-experiments.size > 0 %}
-		<section id="personal-projects">
-			<header>
-				<h2 class="section-title">{{ page.personal-title | default: 'Missing Title'}}</h2>
-				<p class="section-description">{{ page.personal-description | default: 'Missing description'}}</p>
-			</header>
-			{% assign personal = site.portfolio-experiments | sort: 'date' | reverse %}
-			<div class="portfolio-grid">
-				{% for item in personal %}
-				<article class="portfolio-card">
-					<a href="{{ item.url }}" class="portfolio-card-link">
-						<div class="portfolio-card-image">
-							<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
-						</div>
-						<div class="portfolio-card-info">
-							<h3>{{ item.title }}</h3>
-							<ul>
-								<li><small>Description</small> {{ item.summary-description | default: '—' }}</li>
-								<li><small>Role</small> {{ item.summary-role | default: '—' }}</li>
-								<li><small>Tools</small> {{ item.summary-tools | default: '—' }}</li>
-							</ul>
-						</div>
-					</a>
-				</article>
-				{% endfor %}
-			</div>
-		</section>
-		{% endif %}
+			{% if site.portfolio-experiments and site.portfolio-experiments.size > 0 %}
+			<section id="personal-projects">
+				<header>
+					<h2 class="section-title">{{ page.personal-title | default: 'Missing Title'}}</h2>
+					<p class="section-description">{{ page.personal-description | default: 'Missing description'}}</p>
+				</header>
+				{% assign personal = site.portfolio-experiments | sort: 'date' | reverse %}
+				<div class="portfolio-grid">
+					{% for item in personal %}
+					<article class="portfolio-card">
+						<a href="{{ item.url }}" class="portfolio-card-link">
+							<div class="portfolio-card-image">
+								<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
+							</div>
+							<div class="portfolio-card-info">
+								<h3>{{ item.title }}</h3>
+								<ul>
+									<li><small>Description</small> {{ item.summary-description | default: '—' }}</li>
+									<li><small>Role</small> {{ item.summary-role | default: '—' }}</li>
+									<li><small>Tools</small> {{ item.summary-tools | default: '—' }}</li>
+								</ul>
+							</div>
+						</a>
+					</article>
+					{% endfor %}
+				</div>
+			</section>
+			{% endif %}
+		</div>
 	</div>
 </main>

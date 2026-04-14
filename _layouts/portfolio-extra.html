@@ -2,33 +2,35 @@
 layout: default
 ---
 
-<main class="grid-container">
-	<article id="project">
-		<div class="content">
-			<header>
-				<h1>{{ page.title }}</h1>
-			</header>
-			<div class="content-summary">
-				<ul>
-					<li><small>Description</small> {{ page.summary-description | default: '—'}}</li>
-					<li><small>Type</small> {{ page.summary-reason | default: '—'}}</li>
-					<li><small>Role</small> {{ page.summary-role | default: '—'}}</li>
-					<li><small>Tools</small> {{ page.summary-tools | default: '—'}}</li>
-				</ul>
+<main>
+	<div class="grid-container">
+		<article id="project">
+			<div class="content">
+				<header>
+					<h1>{{ page.title }}</h1>
+				</header>
+				<div class="content-summary">
+					<ul>
+						<li><small>Description</small> {{ page.summary-description | default: '—'}}</li>
+						<li><small>Type</small> {{ page.summary-reason | default: '—'}}</li>
+						<li><small>Role</small> {{ page.summary-role | default: '—'}}</li>
+						<li><small>Tools</small> {{ page.summary-tools | default: '—'}}</li>
+					</ul>
+				</div>
+				<figure class="content-hero">
+					{% if page.video %}
+					<video autoplay loop muted playsinline class="card-video">
+						<source src="{{ page.video }}" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					{% elsif page.image %}
+					<img class="hero-image" src="{{ page.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ page.image-caption | default: page.title }}">
+					{% endif %}
+				</figure>
+				<div class="content-body">
+					{{ content }}
+				</div>
 			</div>
-			<figure class="content-hero">
-				{% if page.video %}
-				<video autoplay loop muted playsinline class="card-video">
-					<source src="{{ page.video }}" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-				{% elsif page.image %}
-				<img class="hero-image" src="{{ page.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ page.image-caption | default: page.title }}">
-				{% endif %}
-			</figure>
-			<div class="content-body">
-				{{ content }}
-			</div>
-		</div>
-	</article>
+		</article>
+	</div>
 </main>
