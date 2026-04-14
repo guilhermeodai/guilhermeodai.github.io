@@ -2,35 +2,38 @@
 layout: default
 ---
 
-<div id="intro-wrapper">
-	<section id="intro">
-		<header id="hero">
-			<div id="title">
-				<h1>Guilherme Almeida<br /><span>UI/UX Designer</span><br /><span>Game Developer</span></h1>
+<div id="hero">
+	<div id="hero-title">
+		<div class="titulo-conteudo">
+			<h1>Guilherme Almeida<br /><span>UI/UX Designer</span><br /><span>Game Developer</span></h1>
+		</div>
+	</div>
+	<div id="hero-imagery">
+		<video autoplay loop muted playsinline>
+			<source src="/assets/images/portfolio/sq_post-processing/osaka.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	<div id="hero-buttons">
+		<div class="buttons-grid">
+			<div class="button-container button-flex">
+				<a class="button-cta" href="{{ '/#product-design' | relative_url }}"><span>{{ page.button-portfolio | default: 'Missing label'}}</span><span class="arrow">&rarr;</span></a>
 			</div>
-			<div id="image-1">
+			<div class="button-container button-flex">
+				<a class="button-cta" href="{{ '/about/' | relative_url }}"><span>{{ page.button-about | default: 'Missing label'}}</span><span class="arrow">&rarr;</span></a>
 			</div>
-			<div id="image-2">
-			</div>
-			<div id="image-3">
-			</div>
-			<div id="button-1" class="button-container">
-				<a class="cta-button" href="{{ '/#product-design' | relative_url }}"><span>{{ page.button-portfolio | default: 'Missing label'}}</span></a>
-			</div>
-			<div id="button-2" class="button-container">
-				<a class="cta-button" href="{{ '/about/' | relative_url }}"><span>{{ page.button-about | default: 'Missing label'}}</span></a>
-			</div>
-			<div id="button-3" class="button-container">
-				<a class="cta-button" href="{{ 'https://www.linkedin.com/in/guilherme-odai/' | absolute_url }}" target="_blank" rel="noopener noreferrer">
+			<div class="button-container button-flex">
+				<a class="button-cta" href="{{ 'https://www.linkedin.com/in/guilherme-odai/' | absolute_url }}" target="_blank" rel="noopener noreferrer">
 					<span>{{ page.button-linkedin | default: 'Missing label'}}
 						<svg class="icon-linkedin">
 							<use href="#icon-linkedin"></use>
 						</svg>
 					</span>
+					<span class="arrow">&rarr;</span>
 				</a>
 			</div>
-		</header>
-	</section>
+		</div>
+	</div>
 </div>
 
 <main>
