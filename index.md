@@ -19,7 +19,7 @@ extras-all: "Show all projects"
 
 articles-title: "Latest Articles"
 articles-description: "Thoughts, rants, insights, who knows?"
-articles-all: "To blog <strong>&rarr;</strong>"
+articles-all: "To blog"
 ---
 
 And this is my portfolio
