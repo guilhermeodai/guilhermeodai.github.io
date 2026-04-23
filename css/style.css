@@ -776,7 +776,7 @@ svg.icon-itchio {
 
 #main-menu li {
 	opacity: 0;
-	margin: .5em 1em;
+	margin: 2vh 1em;
 	transform: translateY(1em);
 	transition: opacity .3s ease, transform .3s ease;
 	font-weight: 600;
@@ -913,7 +913,7 @@ svg.icon-itchio {
 	}
 	
 	#main-menu li {
-		margin: 0 1em;
+		margin: 1vh 1em;
 		font-size: var(--h3);
 	}
 }
