@@ -20,6 +20,14 @@ extras-all: "All projects"
 articles-title: "Latest Articles"
 articles-description: "Thoughts, rants, insights, who knows?"
 articles-all: "More articles"
+
+carousel:
+  - src: /assets/images/carousel/imagem1.jpg
+    alt: Descrição 1
+  - src: /assets/images/carousel/imagem2.jpg
+    alt: Descrição 2
+  - src: /assets/images/carousel/imagem3.jpg
+    alt: Descrição 3
 ---
 
 And this is my portfolio

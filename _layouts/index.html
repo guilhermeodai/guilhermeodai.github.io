@@ -3,26 +3,34 @@ layout: default
 ---
 
 <div id="hero">
-	<div id="hero-title">
-		<div class="titulo-conteudo">
-			<h1>Guilherme Almeida<br /><span>UI/UX Designer</span><br /><span>Game Developer</span></h1>
+	<div id="hero-top" class="hero-wrapper">
+		<div id="hero-titulo">
+			<h1>
+				Guilherme Almeida
+				<span id="hero-role">
+					<span>UI/UX Designer</span>
+					<span class="plus">&</span>
+					<span>Game Dev</span>
+				</span>
+			</h1>
 		</div>
 	</div>
 	<div id="hero-imagery">
-		<video autoplay loop muted playsinline>
-			<source src="/assets/images/portfolio/sq_post-processing/osaka.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
+		<div class="hero-carousel">
+			{% for image in page.carousel %}
+			<img src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
+			{% endfor %}
+		</div>
 	</div>
-	<div id="hero-buttons">
-		<div class="buttons-grid">
-			<div class="button-fake button-flex">
+	<div class="hero-wrapper">
+		<div id="hero-buttons">
+			<div class="arrow-wrapper">
 				<span>&darr;</span>
 			</div>
-			<div class="button-container button-flex">
+			<div class="button-wrapper">
 				<a class="button-cta" href="{{ '/about/' | relative_url }}"><span>{{ page.button-about | default: 'Missing label'}}</span><span class="arrow">&rarr;</span></a>
 			</div>
-			<div class="button-container button-flex">
+			<div class="button-wrapper">
 				<a class="button-cta" href="{{ 'https://www.linkedin.com/in/guilherme-odai/' | absolute_url }}" target="_blank" rel="noopener noreferrer">
 					<span>{{ page.button-linkedin | default: 'Missing label'}}</span>
 					<span class="arrow">&rarr;
