@@ -1,6 +1,8 @@
 ---
 layout: easter-egg
+lang: en
 title: Bonus Stage
+page_id: bonus-stage
 permalink: /bonus-stage/
 ---
 

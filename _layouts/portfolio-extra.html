@@ -11,10 +11,10 @@ layout: default
 				</header>
 				<div class="content-summary">
 					<ul>
-						<li><small>Description</small> {{ page.summary-description | default: '—'}}</li>
-						<li><small>Type</small> {{ page.summary-reason | default: '—'}}</li>
-						<li><small>Role</small> {{ page.summary-role | default: '—'}}</li>
-						<li><small>Tools</small> {{ page.summary-tools | default: '—'}}</li>
+						<li><small>{{ site.data.i18n[site.active_lang].summary_description }}</small> {{ page.summary-description | default: '—'}}</li>
+						<li><small>{{ site.data.i18n[site.active_lang].summary_type }}</small> {{ page.summary-reason | default: '—'}}</li>
+						<li><small>{{ site.data.i18n[site.active_lang].summary_role }}</small> {{ page.summary-role | default: '—'}}</li>
+						<li><small>{{ site.data.i18n[site.active_lang].summary_tools }}</small> {{ page.summary-tools | default: '—'}}</li>
 					</ul>
 				</div>
 				<figure class="content-hero">

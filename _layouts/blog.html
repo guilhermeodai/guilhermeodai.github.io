@@ -26,7 +26,10 @@ layout: default
 									<svg class="icon-calendar">
 										<use href="#icon-calendar"></use>
 									</svg>
-									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>
+									{% assign month = post.date | date: "%m" | plus: 0 | minus: 1 %}
+									<time datetime="{{ post.date | date_to_xmlschema }}">
+										{{ site.data.i18n[site.active_lang].months[month] }} {{ post.date | date: "%Y" }}
+									</time>
 								</div>
 							</div>
 						</a>

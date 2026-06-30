@@ -8,9 +8,9 @@ layout: default
 			<h1>
 				Guilherme Almeida
 				<span id="hero-role">
-					<span>UI/UX Designer</span>
-					<span class="plus">&</span>
-					<span>Game Dev</span>
+					<span>{{ site.data.i18n[site.active_lang].role1 }}</span>
+					<span class="plus">{{ site.data.i18n[site.active_lang].role_plus }}</span>
+					<span>{{ site.data.i18n[site.active_lang].role2 }}</span>
 				</span>
 			</h1>
 		</div>
@@ -45,7 +45,7 @@ layout: default
 
 <main>
 	{% if site.portfolio-products and site.portfolio-products.size > 0 %}
-	<section id="product-design" class="grid-container secondary">
+	<section id="{{ site.data.i18n[site.active_lang].anchor_section1 }}" class="grid-container secondary">
 		<div class="col-4">
 			<header class="sticky">
 				<h2 class="section-title">{{ page.products-title | default: 'Missing title'}}</h2>
@@ -60,15 +60,15 @@ layout: default
 				{% for item in projects limit:4 %}
 				<article class="portfolio-card">
 					<a href="{{ item.url }}" class="portfolio-card-link">
-						<div class="portfolio-card-image">
+						<div class="portfolio-card-image" data-cta="{{ site.data.i18n[site.active_lang].cta_portfolio }}">
 							<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
 						</div>
 						<div class="portfolio-card-info">
 							<h3>{{ item.title }}</h3>
 							<ul>
-								<li><small>Description (Platforms)</small> {{ item.summary-description | default: '—' }}</li>
-								<li><small>Role</small> {{ item.summary-role | default: '—' }}</li>
-								<li><small>Tools</small> {{ item.summary-tools | default: '—' }}</li>
+								<li><small>{{ site.data.i18n[site.active_lang].summary_description }}</small> {{ item.summary-description | default: '—' }}</li>
+								<li><small>{{ site.data.i18n[site.active_lang].summary_role }}</small> {{ item.summary-role | default: '—' }}</li>
+								<li><small>{{ site.data.i18n[site.active_lang].summary_tools }}</small> {{ item.summary-tools | default: '—' }}</li>
 							</ul>
 						</div>
 					</a>
@@ -85,15 +85,15 @@ layout: default
 						{% for item in projects offset:2 %}
 						<article class="portfolio-card">
 							<a href="{{ item.url }}" class="portfolio-card-link">
-								<div class="portfolio-card-image">
+								<div class="portfolio-card-image" data-cta="{{ site.data.i18n[site.active_lang].cta_portfolio }}">
 									<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
 								</div>
 								<div class="portfolio-card-info">
 									<h3>{{ item.title }}</h3>
 									<ul>
-										<li><small>Description</small> {{ item.summary-description | default: '—' }}</li>
-										<li><small>Role</small> {{ item.summary-role | default: '—' }}</li>
-										<li><small>Tools</small> {{ item.summary-tools | default: '—' }}</li>
+										<li><small>{{ site.data.i18n[site.active_lang].summary_description }}</small> {{ item.summary-description | default: '—' }}</li>
+										<li><small>{{ site.data.i18n[site.active_lang].summary_role }}</small> {{ item.summary-role | default: '—' }}</li>
+										<li><small>{{ site.data.i18n[site.active_lang].summary_tools }}</small> {{ item.summary-tools | default: '—' }}</li>
 									</ul>
 								</div>
 							</a>
@@ -109,7 +109,7 @@ layout: default
 	{% endif %}
 
 	{% if site.portfolio-cases and site.portfolio-cases.size > 0 %}
-	<section id="case-studies" class="grid-container secondary">
+	<section id="{{ site.data.i18n[site.active_lang].anchor_section2 }}" class="grid-container secondary">
 		<div class="col-4">
 			<header class="sticky">
 				<h2 class="section-title">{{ page.cases-title | default: 'Missing title'}}</h2>
@@ -129,15 +129,15 @@ layout: default
 				{% for item in cases limit:4 %}
 				<article class="portfolio-card">
 					<a href="{{ item.url }}" class="portfolio-card-link">
-						<div class="portfolio-card-image">
+						<div class="portfolio-card-image" data-cta="{{ site.data.i18n[site.active_lang].cta_portfolio }}">
 							<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
 						</div>
 						<div class="portfolio-card-info">
 							<h3>{{ item.title }}</h3>
 							<ul>
-								<li><small>Challenge</small> {{ item.card-problem | default: '—' }}</li>
-								<li><small>Solution</small> {{ item.card-solution | default: '—' }}</li>
-								<li><small>Outcome</small> {{ item.card-outcome | default: '—' }}</li>
+								<li><small>{{ site.data.i18n[site.active_lang].summary_problem }}</small> {{ item.card-problem | default: '—' }}</li>
+								<li><small>{{ site.data.i18n[site.active_lang].summary_solution }}</small> {{ item.card-solution | default: '—' }}</li>
+								<li><small>{{ site.data.i18n[site.active_lang].summary_outcome }}</small> {{ item.card-outcome | default: '—' }}</li>
 							</ul>
 						</div>
 					</a>
@@ -152,15 +152,15 @@ layout: default
 						{% for item in cases offset:2 %}
 						<article class="portfolio-card">
 							<a href="{{ item.url }}" class="portfolio-card-link">
-								<div class="portfolio-card-image">
+								<div class="portfolio-card-image" data-cta="{{ site.data.i18n[site.active_lang].cta_portfolio }}">
 									<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
 								</div>
 								<div class="portfolio-card-info">
 									<h3>{{ item.title }}</h3>
 									<ul>
-										<li><small>Challenge</small> {{ item.summary-problem | default: '—' }}</li>
-										<li><small>Solution</small> {{ item.summary-solution | default: '—' }}</li>
-										<li><small>Outcome</small> {{ item.summary-outcome | default: '—' }}</li>
+										<li><small>{{ site.data.i18n[site.active_lang].summary_problem }}</small> {{ item.summary-problem | default: '—' }}</li>
+										<li><small>{{ site.data.i18n[site.active_lang].summary_solution }}</small> {{ item.summary-solution | default: '—' }}</li>
+										<li><small>{{ site.data.i18n[site.active_lang].summary_outcome }}</small> {{ item.summary-outcome | default: '—' }}</li>
 									</ul>
 								</div>
 							</a>
@@ -176,7 +176,7 @@ layout: default
 	{% endif %}
 
 	{% if site.portfolio-extras and site.portfolio-extras.size > 0 %}
-	<section id="side-quests" class="grid-container secondary">
+	<section id="{{ site.data.i18n[site.active_lang].anchor_section3 }}" class="grid-container secondary">
 		<div class="col-4">
 			<header class="sticky">
 				<h2 class="section-title">{{ page.extras-title | default: 'Missing title'}}</h2>
@@ -196,7 +196,7 @@ layout: default
 				{% for item in extra limit:4 %}
 				<article class="portfolio-card">
 					<a href="{{ item.url }}" class="portfolio-card-link">
-						<div class="portfolio-card-image">
+						<div class="portfolio-card-image" data-cta="{{ site.data.i18n[site.active_lang].cta_portfolio }}">
 							{% if item.video %}
 							<video autoplay loop muted playsinline class="card-video">
 								<source src="{{ item.video }}" type="video/mp4">
@@ -209,9 +209,9 @@ layout: default
 						<div class="portfolio-card-info">
 							<h3>{{ item.title }}</h3>
 							<ul>
-								<li><small>Description</small> {{ item.summary-description | default: '—' }}</li>
-								<li><small>Role</small> {{ item.summary-role | default: '—' }}</li>
-								<li><small>Tools</small> {{ item.summary-tools | default: '—' }}</li>
+								<li><small>{{ site.data.i18n[site.active_lang].summary_description }}</small> {{ item.summary-description | default: '—' }}</li>
+								<li><small>{{ site.data.i18n[site.active_lang].summary_role }}</small> {{ item.summary-role | default: '—' }}</li>
+								<li><small>{{ site.data.i18n[site.active_lang].summary_tools }}</small> {{ item.summary-tools | default: '—' }}</li>
 							</ul>
 						</div>
 					</a>
@@ -226,15 +226,15 @@ layout: default
 						{% for item in extra offset:2 %}
 						<article class="portfolio-card">
 							<a href="{{ item.url }}" class="portfolio-card-link">
-								<div class="portfolio-card-image">
+								<div class="portfolio-card-image" data-cta="{{ site.data.i18n[site.active_lang].cta_portfolio }}">
 									<img src="{{ item.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ item.title }} preview">
 								</div>
 								<div class="portfolio-card-info">
 									<h3>{{ item.title }}</h3>
 									<ul>
-										<li><small>Description</small> {{ item.summary-description | default: '—' }}</li>
-										<li><small>Role</small> {{ item.summary-role | default: '—' }}</li>
-										<li><small>Tools</small> {{ item.summary-tools | default: '—' }}</li>
+										<li><small>{{ site.data.i18n[site.active_lang].summary_description }}</small> {{ item.summary-description | default: '—' }}</li>
+										<li><small>{{ site.data.i18n[site.active_lang].summary_role }}</small> {{ item.summary-role | default: '—' }}</li>
+										<li><small>{{ site.data.i18n[site.active_lang].summary_tools }}</small> {{ item.summary-tools | default: '—' }}</li>
 									</ul>
 								</div>
 							</a>
@@ -250,7 +250,7 @@ layout: default
 	{% endif %}
 
 	{% if site.posts and site.posts.size > 0 %}
-	<section id="articles" class="grid-container secondary">
+	<section id="{{ site.data.i18n[site.active_lang].anchor_blog }}" class="grid-container secondary">
 		<div class="col-4">
 			<header class="sticky">
 				<h2 class="section-title">{{ page.articles-title | default: 'Missing title'}}</h2>
@@ -263,7 +263,7 @@ layout: default
 				{% for post in blog limit:2 %}
 				<article class="blog-card">
 					<a href="{{ post.url }}" class="blog-card-link">
-						<div class="blog-card-image">
+						<div class="blog-card-image" data-cta="{{ site.data.i18n[site.active_lang].cta_blog }}">
 							<img src="{{ post.image | default: '/assets/images/missing-image.svg' | relative_url }}" loading="lazy" alt="{{ post.title }} preview">
 						</div>
 						<div class="blog-card-info">
@@ -272,7 +272,10 @@ layout: default
 								<svg class="icon-calendar">
 									<use href="#icon-calendar"></use>
 								</svg>
-								<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>
+								{% assign month = post.date | date: "%m" | plus: 0 | minus: 1 %}
+								<time datetime="{{ post.date | date_to_xmlschema }}">
+									{{ site.data.i18n[site.active_lang].months[month] }} {{ post.date | date: "%Y" }}
+								</time>
 							</div>
 						</div>
 					</a>
@@ -280,7 +283,8 @@ layout: default
 				{% endfor %}
 			</div>
 			<div class="more">
-				<a href="{{ '/articles/' | relative_url }}"><span>{{ page.articles-all | default: 'Missing label'}}</span><span class="arrow">&rarr;</span></a>
+				{% assign blog = site.pages | where: "page_id", "blog" | where: "lang", site.active_lang | first %}
+				<a href="{{ blog.url | relative_url }}"><span>{{ page.articles-all | default: 'Missing label'}}</span><span class="arrow">&rarr;</span></a>
 			</div>
 		</div>
 	</section>

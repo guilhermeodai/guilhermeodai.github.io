@@ -1,27 +1,27 @@
 ---
 layout: index
-lang: en
+lang: pt-BR
 permalink: /
 
 button-portfolio: "Explore portfolio"
-button-about: "Check my profile"
-button-linkedin: "Let's connect"
+button-about: "Meu perfil"
+button-linkedin: "LinkedIn"
 
-products-title: "Product Design"
+products-title: "Design de Produto"
 products-description: "Shipped projects with a focus on deliverables: gaming UIs, websites"
-products-all: "All projects"
+products-all: "Todos os projetos"
 
-cases-title: "Case Studies"
-cases-description: "Detailed analysis of problems, processes, and impactful results"
-cases-all: "All case studies"
+cases-title: "Estudos de Caso"
+cases-description: "Análise detalhada de problemas, processos e resultados de impacto"
+cases-all: "Todos os estudos de caso"
 
 extras-title: "Side Quests"
-extras-description: "Personal projects, academic work, and canceled ideas that never saw daylight"
-extras-all: "All projects"
+extras-description: "Projetos pessoais, trabalhos acadêmicos e experimentos"
+extras-all: "Todos os projetos"
 
-articles-title: "Latest Articles"
+articles-title: "Blog"
 articles-description: "Thoughts, rants, insights, who knows?"
-articles-all: "More articles"
+articles-all: "Todos os posts"
 
 carousel:
   - src: /assets/images/carousel/imagem1.jpg

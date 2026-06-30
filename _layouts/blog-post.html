@@ -18,7 +18,10 @@ layout: default
 						<svg class="icon-calendar">
 							<use href="#icon-calendar"></use>
 						</svg>
-						<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time>
+						{% assign month = page.date | date: "%m" | plus: 0 | minus: 1 %}
+						<time datetime="{{ page.date | date_to_xmlschema }}">
+							{{ site.data.i18n[site.active_lang].months[month] }} {{ page.date | date: "%Y" }}
+						</time>
 					</div>
 					{% if page.description %}
 					<p>{{ page.description }}</p>

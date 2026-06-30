@@ -1,0 +1,195 @@
+en:
+  # Hero
+  role1: "UI/UX Designer"
+  role2: "Game Dev"
+  role_plus: "&"
+
+  # Navigation
+  nav_home: "Home"
+  nav_section1: "Product Design"
+  anchor_section1: "product-design"
+  nav_section2: "Case Studies"
+  anchor_section2: "case-studies"
+  nav_section3: "Side Quests"
+  anchor_section3: "side-quests"
+  nav_blog: "Blog"
+  anchor_blog: "blog"
+  nav_about: "About"
+
+  # Summaries
+  cta_portfolio: "Learn more"
+  cta_blog: "Continue reading"
+  summary_platforms: "Platforms"
+  summary_description: "Description"
+  summary_role: "Role"
+  summary_tools: "Tools"
+  summary_problem: "Challenge"
+  summary_solution: "Solution"
+  summary_outcome: "Outcome"
+  summary_employer: "Employer (Sector)"
+  summary_process: "Process"
+  summary_type: "Type"
+
+  # About - Contact Form
+  form_header1: "Contact details"
+  form_name: "Name"
+  form_email: "E-mail"
+  form_company: "Company (optional)"
+  form_header2: "How can I help you?"
+  form_message: "Your message"
+  form_submit: "Send Message"
+
+  # Footer
+  footer_linkedin: "LinkedIn Profile"
+  footer_itchio: "Itch.io Profile"
+  footer_rss: "RSS Feed"
+  footer_top: "Return to Top"
+  footer_resume: "Resumé"
+  footer_faq: "FAQ"
+  footer_contact: "Contact"
+  footer_tagline: "Handcrafted with Jekyll and Github Pages"
+
+  # Months
+  months:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+
+pt-BR:
+  # Hero
+  role1: "Designer UI/UX"
+  role2: "Game Dev"
+  role_plus: "&"
+
+  # Navigation
+  nav_home: "Início"
+  nav_section1: "Design de Produto"
+  anchor_section1: "design-de-produto"
+  nav_section2: "Estudos de Caso"
+  anchor_section2: "estudos-de-caso"
+  nav_section3: "Side Quests"
+  anchor_section3: "side-quests"
+  nav_blog: "Blog"
+  anchor_blog: "blog"
+  nav_about: "Sobre"
+
+  # Summaries
+  cta_portfolio: "Saiba mais"
+  cta_blog: "Continue lendo"
+  summary_platforms: "Plataformas"
+  summary_description: "Descrição"
+  summary_role: "Função"
+  summary_tools: "Ferramentas"
+  summary_problem: "Problema"
+  summary_solution: "Solução"
+  summary_outcome: "Resultados"
+  summary_employer: "Contratante (Setor)"
+  summary_process: "Processo"
+  summary_type: "Tipo"
+
+  # About - Contact Form
+  form_header1: "Dados de contato"
+  form_name: "Nome"
+  form_email: "E-mail"
+  form_company: "Firma (opcional)"
+  form_header2: "Em que posso ajudar?"
+  form_message: "Sua mensagem"
+  form_submit: "Enviar Mensagem"
+
+  # Footer
+  footer_linkedin: "Perfil LinkedIn"
+  footer_itchio: "Perfil Itch.io"
+  footer_rss: "Feed RSS"
+  footer_top: "Voltar ao Topo"
+  footer_resume: "Currículo"
+  footer_faq: "FAQ"
+  footer_contact: "Contato"
+  footer_tagline: "Feito à mão com Jekyll e Github Pages"
+
+  months:
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+
+es:
+  # Hero
+  role1: "Diseñador UI/UX"
+  role2: "Game Dev"
+  role_plus: "y"
+
+  # Navigation
+  nav_home: "Inicio"
+  nav_section1: "Product Design"
+  anchor_section1: "design-de-produto"
+  nav_section2: "Estúdios de Caso"
+  anchor_section2: "estudos-de-caso"
+  nav_section3: "Side Quests"
+  anchor_section3: "side-quests"
+  nav_blog: "Blog"
+  anchor_blog: "blog"
+  nav_about: "Sobre"
+
+  # Summaries
+  cta_portfolio: "Learn more"
+  cta_blog: "Continue reading"
+  summary_platforms: "Platforms"
+  summary_description: "Description"
+  summary_role: "Role"
+  summary_tools: "Tools"
+  summary_problem: "Challenge"
+  summary_solution: "Solution"
+  summary_outcome: "Outcome"
+  summary_employer: "Employer (Sector)"
+  summary_process: "Process"
+  summary_type: "Type"
+
+  # About - Contact Form
+  form_header1: "Datos de contacto"
+  form_name: "Nombre"
+  form_email: "E-mail"
+  form_company: "Empresa (opcional)"
+  form_header2: "¿En qué puedo ayudarle?"
+  form_message: "Su mensaje"
+  form_submit: "Enviar Mensaje"
+
+  # Footer
+  footer_linkedin: "LinkedIn Profile"
+  footer_itchio: "Itch.io Profile"
+  footer_rss: "Fuente RSS"
+  footer_top: "Volver al Inicio"
+  footer_resume: "Resumé"
+  footer_faq: "FAQ"
+  footer_contact: "Contacto"
+  footer_tagline: "Hecho a mano con Jekyll y Github Pages"
+  
+  months:
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Deciembre

@@ -1,6 +1,8 @@
 ---
 layout: blog
+lang: en
 title: "Articles"
+page_id: blog
 permalink: /articles/
 
 blog-title: "Articles"

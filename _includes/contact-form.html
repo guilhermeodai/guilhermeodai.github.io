@@ -1,21 +1,21 @@
 <!-- modify this form HTML and place wherever you want your form -->
 <form class="contact" action="https://formspree.io/f/xjkrawev" method="POST">
-	<h3>Contact details</h3>
+	<h3>{{ site.data.i18n[site.active_lang].form_header1 }}</h3>
 	<label class="contact-name" aria-label="Name">
-		<input required type="text" name="name" placeholder="Name">
+		<input required type="text" name="name" placeholder="{{ site.data.i18n[site.active_lang].form_name }}">
 	</label>
 	<label class="contact-email" aria-label="Email">
-		<input required type="email" name="email" placeholder="E-mail">
+		<input required type="email" name="email" placeholder="{{ site.data.i18n[site.active_lang].form_email }}">
 	</label>
 	<label class="contact-company" aria-label="Company">
-		<input type="text" name="name" placeholder="Company (optional)">
+		<input type="text" name="name" placeholder="{{ site.data.i18n[site.active_lang].form_company }}">
 	</label>
-	<h3>How can I help you?</h3>
+	<h3>{{ site.data.i18n[site.active_lang].form_header2 }}</h3>
 	<label class="contact-message" aria-label="Message">
-		<textarea required name="message" placeholder="Your message"></textarea>
+		<textarea required name="message" placeholder="{{ site.data.i18n[site.active_lang].form_message }}"></textarea>
 	</label>
 	<!-- your other form fields go here -->
 	<div class="button-container">
-		<button class="contact-send" type="submit"><span>Send Message</span><span class="arrow">&rarr;</span></button>
+		<button class="contact-send" type="submit"><span>{{ site.data.i18n[site.active_lang].form_submit }}</span><span class="arrow">&rarr;</span></button>
 	</div>
 </form>

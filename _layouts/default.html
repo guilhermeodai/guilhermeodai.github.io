@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="start" lang="en-US" data-theme="light">
+<html id="start" lang="{{ site.active_lang }}" data-theme="light">
 
 <head>
 	<meta charset="utf-8">
@@ -50,11 +50,12 @@
 				<a href="{% if page.url == '/' %}{{ '/#start' | relative_url }}{% elsif page.url != '/' %}{{ '/' | relative_url }}{% endif %}">[&nbsp;Gui.lher.me&nbsp;]</a>
 			</div>
 			<ul id="main-menu">
-				<li><a href="{{ '/#product-design' | relative_url }}">Product Design</a></li>
-				<li><a href="{{ '/#case-studies' | relative_url }}">Case Studies</a></li>
-				<li><a href="{{ '/#side-quests' | relative_url }}">Side Quests</a></li>
-				<li><a href="{{ '/articles/' | relative_url }}">Articles</a></li>
-				<li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
+				{% assign about = site.pages | where: "page_id", "about" | where: "lang", site.active_lang | first %}
+				<li><a href="{{ '/' | relative_url }}#{{ site.data.i18n[site.active_lang].anchor_section1 }}">{{ site.data.i18n[site.active_lang].nav_section1 }}</a></li>
+				<li><a href="{{ '/' | relative_url }}#{{ site.data.i18n[site.active_lang].anchor_section2 }}">{{ site.data.i18n[site.active_lang].nav_section2 }}</a></li>
+				<li><a href="{{ '/' | relative_url }}#{{ site.data.i18n[site.active_lang].anchor_section3 }}">{{ site.data.i18n[site.active_lang].nav_section3 }}</a></li>
+				<li><a href="{{ '/' | relative_url }}#{{ site.data.i18n[site.active_lang].anchor_blog }}">{{ site.data.i18n[site.active_lang].nav_blog }}</a></li>
+				<li><a href="{{ about.url | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">{{ site.data.i18n[site.active_lang].nav_about }}</a></li>
 				<li class="social">
 					<a href="{{ 'https://www.linkedin.com/in/guilherme-odai/' | absolute_url }}" target="_blank" rel="noopener noreferrer" class="icon" aria-label="LinkedIn Profile">
 						<svg class="icon-linkedin">

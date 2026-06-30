@@ -34,9 +34,10 @@ feed:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-polyglot
 
 # Data
-data:
+custom:
   dates:
     start_year: 2025
 
@@ -84,6 +85,12 @@ defaults:
     values:
       layout: "portfolio-product"
       order: 99
+
+# Polyglot
+languages: ["en", "pt-BR"]
+default_lang: "en"
+exclude_from_localization: ["assets/fonts", "assets/icons", "assets/images", "css"]
+parallel_localization: true
 
 # Ignored Files
 exclude:

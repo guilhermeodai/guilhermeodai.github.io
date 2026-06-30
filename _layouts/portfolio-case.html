@@ -11,10 +11,10 @@ layout: default
 				</header>
 				<div class="content-summary">
 					<ul>
-						<li><small>Description (Platforms)</small> {{ page.summary-description | default: '—'}}</li>
-						<li><small>Employer (Sector)</small> {{ page.summary-employer | default: '—'}}</li>
-						<li><small>Role</small> {{ page.summary-role | default: '—'}}</li>
-						<li><small>Process</small> {{ page.summary-process | default: '—'}}</li>
+						<li><small>{{ site.data.i18n[site.active_lang].summary_description }}</small> {{ page.summary-description | default: '—'}}</li>
+						<li><small>{{ site.data.i18n[site.active_lang].summary_employer }}</small> {{ page.summary-employer | default: '—'}}</li>
+						<li><small>{{ site.data.i18n[site.active_lang].summary_role }}</small> {{ page.summary-role | default: '—'}}</li>
+						<li><small>{{ site.data.i18n[site.active_lang].summary_process }}</small> {{ page.summary-process | default: '—'}}</li>
 					</ul>
 				</div>
 				<figure class="content-hero">
