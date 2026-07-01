@@ -29,6 +29,7 @@
 				<a href="{{ about.url | relative_url }}#contact-form">
 					{{ site.data.i18n[site.active_lang].footer_contact }}
 				</a>
+				{% include language-switcher.html %}
 			</nav>
 			<p aria-label="Copyright"><strong>{{ site.title }}</strong> &mdash; {{ site.data.i18n[site.active_lang].role1 }} {{ site.data.i18n[site.active_lang].role_plus }} {{ site.data.i18n[site.active_lang].role2 }}<br />&copy;
 				{% assign current_year = site.time | date: "%Y" | plus: 0 %}

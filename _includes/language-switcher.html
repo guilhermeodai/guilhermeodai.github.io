@@ -1,0 +1,10 @@
+<!-- _includes/language-switcher.html -->
+<ul class="lang-switcher">
+	{% for lang in site.languages %}
+	<li>
+		<a {% static_href %} href="{{ site.baseurl }}{% if lang != site.default_lang %}/{{ lang }}{% endif %}{{ page.permalink_lang[lang] | default: '/' }}" {% endstatic_href %} data-lang="{{ lang }}">
+			{{ lang }}
+		</a>
+	</li>
+	{% endfor %}
+</ul>

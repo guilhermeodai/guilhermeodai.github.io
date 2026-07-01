@@ -90,7 +90,7 @@ defaults:
 languages: ["en", "pt-BR"]
 default_lang: "en"
 exclude_from_localization: ["assets/fonts", "assets/icons", "assets/images", "css"]
-parallel_localization: true
+parallel_localization: false
 
 # Ignored Files
 exclude:
